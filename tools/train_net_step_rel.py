@@ -61,7 +61,7 @@ def parse_args():
     parser.add_argument(
         '--disp_interval',
         help='Display training info every N iterations',
-        default=20, type=int)
+        default=50, type=int)
     parser.add_argument(
         '--no_cuda', dest='cuda', help='Do not use CUDA device', action='store_false')
 
@@ -166,6 +166,10 @@ def main():
         cfg.TRAIN.DATASETS = ('vg_train',)
         cfg.MODEL.NUM_CLASSES = 151
         cfg.MODEL.NUM_PRD_CLASSES = 50  # exclude background
+    elif args.dataset == "gqa":
+        cfg.TRAIN.DATASETS = ('gqa_train',)
+        cfg.MODEL.NUM_CLASSES = 1039   # include 'none' type
+        cfg.MODEL.NUM_PRD_CLASSES = 173   # include 'none' type
     elif args.dataset == "oi_rel":
         cfg.TRAIN.DATASETS = ('oi_rel_train',)
         # cfg.MODEL.NUM_CLASSES = 62
