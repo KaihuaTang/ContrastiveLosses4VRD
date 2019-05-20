@@ -26,8 +26,8 @@ SOLVER:
   # 1x schedule (note TRAIN.IMS_PER_BATCH: 1)
   BASE_LR: 0.01
   GAMMA: 0.1
-  MAX_ITER: 62723  # 62723 images
-  STEPS: [0, 41815, 55754]
+  MAX_ITER: 125446  # 62723 images
+  STEPS: [0, 83630, 111508]
 FPN:
   FPN_ON: True
   MULTILEVEL_ROIS: True

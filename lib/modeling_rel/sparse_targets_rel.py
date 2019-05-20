@@ -31,6 +31,8 @@ class FrequencyBias(nn.Module):
 
         if ds_name.find('vg') >= 0:
             ds_name = 'vg'
+        elif ds_name.find('gqa') >= 0:
+            ds_name = 'gqa'
         elif ds_name.find('oi') >= 0:
             ds_name = 'oi'
         elif ds_name.find('vrd') >= 0:
