@@ -121,8 +121,8 @@ if __name__ == '__main__':
         cfg.MODEL.NUM_PRD_CLASSES = 50  # exclude background
     elif args.dataset == "gqa":
         cfg.TEST.DATASETS = ('gqa_val',)
-        cfg.MODEL.NUM_CLASSES = 1039   # include 'none' type
-        cfg.MODEL.NUM_PRD_CLASSES = 173   # include 'none' type
+        cfg.MODEL.NUM_CLASSES = 1040   # include 'none' type
+        cfg.MODEL.NUM_PRD_CLASSES = 173   # include 'none' type, exclude background
     elif args.dataset == "vrd_train":
         cfg.TEST.DATASETS = ('vrd_train',)
         cfg.MODEL.NUM_CLASSES = 101

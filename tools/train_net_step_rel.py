@@ -168,8 +168,8 @@ def main():
         cfg.MODEL.NUM_PRD_CLASSES = 50  # exclude background
     elif args.dataset == "gqa":
         cfg.TRAIN.DATASETS = ('gqa_train',)
-        cfg.MODEL.NUM_CLASSES = 1039   # include 'none' type
-        cfg.MODEL.NUM_PRD_CLASSES = 173   # include 'none' type
+        cfg.MODEL.NUM_CLASSES = 1040   # include 'none' type
+        cfg.MODEL.NUM_PRD_CLASSES = 173   # include 'none' type, exclude background
     elif args.dataset == "oi_rel":
         cfg.TRAIN.DATASETS = ('oi_rel_train',)
         # cfg.MODEL.NUM_CLASSES = 62
