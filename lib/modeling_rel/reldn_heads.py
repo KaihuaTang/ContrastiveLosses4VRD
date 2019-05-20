@@ -36,9 +36,9 @@ class reldn_head(nn.Module):
             return
         
         self.prd_cls_feats = nn.Sequential(
-            nn.Linear(dim_in, dim_in // 2),
+            nn.Linear(dim_in, dim_in // 3),
             nn.LeakyReLU(0.1),
-            nn.Linear(dim_in // 2, dim_in_final),
+            nn.Linear(dim_in // 3, dim_in_final),
             nn.LeakyReLU(0.1))
         self.prd_cls_scores = nn.Linear(dim_in_final, num_prd_classes)
         
