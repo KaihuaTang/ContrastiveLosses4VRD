@@ -33,6 +33,9 @@ def get_rel_counts(ds_name, must_overlap=True):
     if ds_name.find('vg') >= 0:
         with open(DATASETS['vg_train'][ANN_FN2]) as f:
             train_data = json.load(f)
+    elif ds_name.find('gqa') >= 0:
+        with open(DATASETS['gqa_train'][ANN_FN2]) as f:
+            train_data = json.load(f)
     elif ds_name.find('oi') >= 0:
         with open(DATASETS['oi_rel_train'][ANN_FN2]) as f:
             train_data = json.load(f)
